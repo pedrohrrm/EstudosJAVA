@@ -30,8 +30,8 @@ public class IncluirPedido extends javax.swing.JFrame {
         CaixaTextoCelClient = new javax.swing.JTextField();
         IngredientesProduto = new javax.swing.JLabel();
         CaixaTextoIngredientesProduto = new javax.swing.JTextField();
-        ValorProduto = new javax.swing.JLabel();
-        CaixaTextoValorProduto = new javax.swing.JTextField();
+        QuantidadeProduto = new javax.swing.JLabel();
+        CaixaTextoQuantidadeProduto = new javax.swing.JTextField();
         BotaoIncluir = new javax.swing.JButton();
         DescricaoProduto = new javax.swing.JLabel();
         CaixaTextoDescricaoProduto = new javax.swing.JTextField();
@@ -80,13 +80,13 @@ public class IncluirPedido extends javax.swing.JFrame {
         });
         getContentPane().add(CaixaTextoIngredientesProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 330, 370, -1));
 
-        ValorProduto.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        ValorProduto.setForeground(new java.awt.Color(255, 255, 255));
-        ValorProduto.setText("Quantidade:");
-        getContentPane().add(ValorProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 370, -1, -1));
+        QuantidadeProduto.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        QuantidadeProduto.setForeground(new java.awt.Color(255, 255, 255));
+        QuantidadeProduto.setText("Quantidade:");
+        getContentPane().add(QuantidadeProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 370, -1, -1));
 
-        CaixaTextoValorProduto.setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(CaixaTextoValorProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 370, 370, -1));
+        CaixaTextoQuantidadeProduto.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(CaixaTextoQuantidadeProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 370, 370, -1));
 
         BotaoIncluir.setBackground(new java.awt.Color(204, 255, 255));
         BotaoIncluir.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
@@ -292,7 +292,7 @@ public class IncluirPedido extends javax.swing.JFrame {
     private javax.swing.JTextField CaixaTextoCelClient;
     private javax.swing.JTextField CaixaTextoDescricaoProduto;
     private javax.swing.JTextField CaixaTextoIngredientesProduto;
-    private javax.swing.JTextField CaixaTextoValorProduto;
+    private javax.swing.JTextField CaixaTextoQuantidadeProduto;
     private javax.swing.JLabel CelClient;
     private javax.swing.JLabel DescricaoProduto;
     private javax.swing.JMenuItem EditarPedido;
@@ -304,6 +304,6 @@ public class IncluirPedido extends javax.swing.JFrame {
     private javax.swing.JMenu MenuPedidos;
     private javax.swing.JMenuItem ProdutoLanches;
     private javax.swing.JMenuItem ProdutosBebidas;
-    private javax.swing.JLabel ValorProduto;
+    private javax.swing.JLabel QuantidadeProduto;
     // End of variables declaration//GEN-END:variables
 }

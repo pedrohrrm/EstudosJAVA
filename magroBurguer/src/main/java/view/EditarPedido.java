@@ -28,17 +28,19 @@ public class EditarPedido extends javax.swing.JFrame {
 
         CaixaTextoIngredientesProduto = new javax.swing.JTextField();
         BotaoIncluir = new javax.swing.JButton();
-        FundoPrincipal = new javax.swing.JLabel();
         CelClient = new javax.swing.JLabel();
-        ValorProduto = new javax.swing.JLabel();
-        FundoCadastroFuncionario = new javax.swing.JLabel();
+        QuantidadeProduto = new javax.swing.JLabel();
         BotaoIncluir1 = new javax.swing.JButton();
-        IngredientesProduto = new javax.swing.JLabel();
+        Produto = new javax.swing.JLabel();
         BotaoIncluir2 = new javax.swing.JButton();
         CaixaTextoCelClient = new javax.swing.JTextField();
         DescricaoProduto = new javax.swing.JLabel();
-        CaixaTextoValorProduto = new javax.swing.JTextField();
+        CaixaTextoQuantidadeProduto = new javax.swing.JTextField();
         CaixaTextoDescricaoProduto = new javax.swing.JTextField();
+        CaixaTextoProdutoAlterar = new javax.swing.JTextField();
+        ProdutoAlterar = new javax.swing.JLabel();
+        FundoCadastroFuncionario = new javax.swing.JLabel();
+        FundoPrincipal = new javax.swing.JLabel();
         BarraMenu = new javax.swing.JMenuBar();
         MenuCadastro = new javax.swing.JMenu();
         BotaoCadastroFuncionario = new javax.swing.JMenuItem();
@@ -50,6 +52,7 @@ public class EditarPedido extends javax.swing.JFrame {
         EditarPedido = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         CaixaTextoIngredientesProduto.setBackground(new java.awt.Color(255, 255, 255));
         CaixaTextoIngredientesProduto.addActionListener(new java.awt.event.ActionListener() {
@@ -57,29 +60,28 @@ public class EditarPedido extends javax.swing.JFrame {
                 CaixaTextoIngredientesProdutoActionPerformed(evt);
             }
         });
+        getContentPane().add(CaixaTextoIngredientesProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 280, 370, -1));
 
         BotaoIncluir.setBackground(new java.awt.Color(204, 255, 255));
         BotaoIncluir.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         BotaoIncluir.setForeground(new java.awt.Color(0, 0, 0));
-        BotaoIncluir.setText("Incluir item");
+        BotaoIncluir.setText("Atualizar Item");
         BotaoIncluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotaoIncluirActionPerformed(evt);
             }
         });
-
-        FundoPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewImagens/MenuPrincipal.png"))); // NOI18N
+        getContentPane().add(BotaoIncluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 450, -1, -1));
 
         CelClient.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         CelClient.setForeground(new java.awt.Color(255, 255, 255));
         CelClient.setText("Id Cliente:");
+        getContentPane().add(CelClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 250, -1, -1));
 
-        ValorProduto.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        ValorProduto.setForeground(new java.awt.Color(255, 255, 255));
-        ValorProduto.setText("Quantidade:");
-
-        FundoCadastroFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewImagens/FundoDosCadastros.png"))); // NOI18N
-        FundoCadastroFuncionario.setText("jLabel1");
+        QuantidadeProduto.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        QuantidadeProduto.setForeground(new java.awt.Color(255, 255, 255));
+        QuantidadeProduto.setText("Quantidade:");
+        getContentPane().add(QuantidadeProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 370, -1, -1));
 
         BotaoIncluir1.setBackground(new java.awt.Color(204, 255, 255));
         BotaoIncluir1.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
@@ -90,10 +92,12 @@ public class EditarPedido extends javax.swing.JFrame {
                 BotaoIncluir1ActionPerformed(evt);
             }
         });
+        getContentPane().add(BotaoIncluir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 490, -1, -1));
 
-        IngredientesProduto.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        IngredientesProduto.setForeground(new java.awt.Color(255, 255, 255));
-        IngredientesProduto.setText("Produto:");
+        Produto.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        Produto.setForeground(new java.awt.Color(255, 255, 255));
+        Produto.setText("Produto:");
+        getContentPane().add(Produto, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 280, -1, -1));
 
         BotaoIncluir2.setBackground(new java.awt.Color(204, 255, 255));
         BotaoIncluir2.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
@@ -104,6 +108,7 @@ public class EditarPedido extends javax.swing.JFrame {
                 BotaoIncluir2ActionPerformed(evt);
             }
         });
+        getContentPane().add(BotaoIncluir2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 530, -1, -1));
 
         CaixaTextoCelClient.setBackground(new java.awt.Color(255, 255, 255));
         CaixaTextoCelClient.setText("Celuar do Cliente");
@@ -113,12 +118,15 @@ public class EditarPedido extends javax.swing.JFrame {
                 CaixaTextoCelClientActionPerformed(evt);
             }
         });
+        getContentPane().add(CaixaTextoCelClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 250, 370, -1));
 
         DescricaoProduto.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         DescricaoProduto.setForeground(new java.awt.Color(255, 255, 255));
         DescricaoProduto.setText("Observações:");
+        getContentPane().add(DescricaoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 410, -1, -1));
 
-        CaixaTextoValorProduto.setBackground(new java.awt.Color(255, 255, 255));
+        CaixaTextoQuantidadeProduto.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(CaixaTextoQuantidadeProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 370, 370, -1));
 
         CaixaTextoDescricaoProduto.setBackground(new java.awt.Color(255, 255, 255));
         CaixaTextoDescricaoProduto.addActionListener(new java.awt.event.ActionListener() {
@@ -126,6 +134,27 @@ public class EditarPedido extends javax.swing.JFrame {
                 CaixaTextoDescricaoProdutoActionPerformed(evt);
             }
         });
+        getContentPane().add(CaixaTextoDescricaoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 410, 370, -1));
+
+        CaixaTextoProdutoAlterar.setBackground(new java.awt.Color(255, 255, 255));
+        CaixaTextoProdutoAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CaixaTextoProdutoAlterarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CaixaTextoProdutoAlterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 320, 370, -1));
+
+        ProdutoAlterar.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        ProdutoAlterar.setForeground(new java.awt.Color(255, 255, 255));
+        ProdutoAlterar.setText("Novo Produto:");
+        getContentPane().add(ProdutoAlterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 320, -1, -1));
+
+        FundoCadastroFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewImagens/FundoDosCadastros.png"))); // NOI18N
+        FundoCadastroFuncionario.setText("jLabel1");
+        getContentPane().add(FundoCadastroFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, -1, -1));
+
+        FundoPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewImagens/MenuPrincipal.png"))); // NOI18N
+        getContentPane().add(FundoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         MenuCadastro.setText("Cadastro");
 
@@ -186,98 +215,6 @@ public class EditarPedido extends javax.swing.JFrame {
 
         setJMenuBar(BarraMenu);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1980, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(810, 810, 810)
-                            .addComponent(CelClient)
-                            .addGap(1, 1, 1)
-                            .addComponent(CaixaTextoCelClient, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(1020, 1020, 1020)
-                            .addComponent(BotaoIncluir2))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(1030, 1030, 1030)
-                            .addComponent(BotaoIncluir))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(920, 920, 920)
-                            .addComponent(CaixaTextoValorProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(830, 830, 830)
-                            .addComponent(IngredientesProduto))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(920, 920, 920)
-                            .addComponent(CaixaTextoDescricaoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(920, 920, 920)
-                            .addComponent(CaixaTextoIngredientesProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(FundoPrincipal)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(810, 810, 810)
-                            .addComponent(DescricaoProduto))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(1010, 1010, 1010)
-                            .addComponent(BotaoIncluir1))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(430, 430, 430)
-                            .addComponent(FundoCadastroFuncionario))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(810, 810, 810)
-                            .addComponent(ValorProduto)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1080, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(290, 290, 290)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(CelClient)
-                                .addComponent(CaixaTextoCelClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(222, 222, 222)
-                            .addComponent(BotaoIncluir2))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(440, 440, 440)
-                            .addComponent(BotaoIncluir))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(370, 370, 370)
-                            .addComponent(CaixaTextoValorProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(330, 330, 330)
-                            .addComponent(IngredientesProduto))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(410, 410, 410)
-                            .addComponent(CaixaTextoDescricaoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(330, 330, 330)
-                            .addComponent(CaixaTextoIngredientesProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(FundoPrincipal)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(410, 410, 410)
-                            .addComponent(DescricaoProduto))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(490, 490, 490)
-                            .addComponent(BotaoIncluir1))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(140, 140, 140)
-                            .addComponent(FundoCadastroFuncionario))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(370, 370, 370)
-                            .addComponent(ValorProduto)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -325,6 +262,10 @@ public class EditarPedido extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CaixaTextoDescricaoProdutoActionPerformed
 
+    private void CaixaTextoProdutoAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CaixaTextoProdutoAlterarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CaixaTextoProdutoAlterarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -370,18 +311,20 @@ public class EditarPedido extends javax.swing.JFrame {
     private javax.swing.JTextField CaixaTextoCelClient;
     private javax.swing.JTextField CaixaTextoDescricaoProduto;
     private javax.swing.JTextField CaixaTextoIngredientesProduto;
-    private javax.swing.JTextField CaixaTextoValorProduto;
+    private javax.swing.JTextField CaixaTextoProdutoAlterar;
+    private javax.swing.JTextField CaixaTextoQuantidadeProduto;
     private javax.swing.JLabel CelClient;
     private javax.swing.JLabel DescricaoProduto;
     private javax.swing.JMenuItem EditarPedido;
     private javax.swing.JLabel FundoCadastroFuncionario;
     private javax.swing.JLabel FundoPrincipal;
     private javax.swing.JMenuItem IncluirPedido;
-    private javax.swing.JLabel IngredientesProduto;
     private javax.swing.JMenu MenuCadastro;
     private javax.swing.JMenu MenuPedidos;
+    private javax.swing.JLabel Produto;
+    private javax.swing.JLabel ProdutoAlterar;
     private javax.swing.JMenuItem ProdutoLanches;
     private javax.swing.JMenuItem ProdutosBebidas;
-    private javax.swing.JLabel ValorProduto;
+    private javax.swing.JLabel QuantidadeProduto;
     // End of variables declaration//GEN-END:variables
 }
